@@ -20,3 +20,6 @@ next-env.d.ts
 # claude launch config
 .claude/
 .vercel
+
+# editor swap files
+*.swp
