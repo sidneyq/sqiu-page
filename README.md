@@ -2,6 +2,9 @@
 
 Personal website for Sidney Qiu — built with [Next.js](https://nextjs.org), deployed on [Vercel](https://vercel.com).
 
+**Live at [sqiu-page.vercel.app](https://sqiu-page.vercel.app)**
+
+
 ## Editing the site
 
 **All content lives in one file: [`data/profile.ts`](data/profile.ts).**
