@@ -1,0 +1,278 @@
+:root {
+  --bg: #fdfdfc;
+  --text: #1a1a1a;
+  --text-muted: #6b6b6b;
+  --text-faint: #9a9a9a;
+  --accent: #0f766e;
+  --accent-soft: #f0faf8;
+  --border: #e8e8e5;
+  --max-width: 44rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-sans), -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 1.0625rem;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+main {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 1.5rem 6rem;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* ── Header / nav ─────────────────────────── */
+
+header {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.brand {
+  font-family: var(--font-serif), Georgia, serif;
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+nav {
+  display: flex;
+  gap: 1.4rem;
+  font-size: 0.92rem;
+}
+
+nav a {
+  color: var(--text-muted);
+}
+
+nav a:hover {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+/* ── Hero ─────────────────────────────────── */
+
+.hero {
+  padding: 4.5rem 0 3.5rem;
+}
+
+.hero h1 {
+  font-family: var(--font-serif), Georgia, serif;
+  font-size: clamp(2.5rem, 7vw, 3.4rem);
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+}
+
+.hero .tagline {
+  margin-top: 0.9rem;
+  font-size: 1.25rem;
+  color: var(--text-muted);
+}
+
+.hero .tagline strong {
+  color: var(--text);
+  font-weight: 600;
+}
+
+.hero .meta {
+  margin-top: 0.5rem;
+  color: var(--text-faint);
+  font-size: 0.95rem;
+}
+
+.badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1.4rem;
+}
+
+.badge {
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  color: var(--accent);
+  background: var(--accent-soft);
+  border: 1px solid color-mix(in srgb, var(--accent) 18%, transparent);
+  border-radius: 999px;
+  padding: 0.2rem 0.75rem;
+}
+
+.hero .links {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 1.8rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+/* ── Sections ─────────────────────────────── */
+
+section {
+  padding-top: 3.5rem;
+}
+
+section h2 {
+  font-family: var(--font-serif), Georgia, serif;
+  font-size: 1.6rem;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  margin-bottom: 1.5rem;
+}
+
+.about p + p {
+  margin-top: 1rem;
+}
+
+/* ── Experience timeline ──────────────────── */
+
+.job {
+  position: relative;
+  padding: 0 0 2.2rem 1.75rem;
+  border-left: 1px solid var(--border);
+}
+
+.job:last-child {
+  padding-bottom: 0.5rem;
+}
+
+.job::before {
+  content: "";
+  position: absolute;
+  left: -5px;
+  top: 0.55rem;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--bg);
+  border: 2px solid var(--accent);
+}
+
+.job h3 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.job .company {
+  color: var(--accent);
+  font-weight: 500;
+}
+
+.job .period {
+  font-size: 0.88rem;
+  color: var(--text-faint);
+  margin-top: 0.1rem;
+}
+
+.job ul {
+  margin-top: 0.6rem;
+  padding-left: 1.1rem;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+.job li + li {
+  margin-top: 0.35rem;
+}
+
+/* ── Education ────────────────────────────── */
+
+.education-item {
+  display: flex;
+  align-items: baseline;
+  gap: 0.6rem;
+}
+
+.education-item .school {
+  font-weight: 600;
+}
+
+.education-item .detail {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+/* ── Interests ────────────────────────────── */
+
+.interests-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+  gap: 1.25rem;
+}
+
+.interest-card {
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.4rem 1.5rem;
+  background: #fff;
+}
+
+.interest-card .emoji {
+  font-size: 1.6rem;
+}
+
+.interest-card h3 {
+  font-size: 1.02rem;
+  font-weight: 600;
+  margin-top: 0.6rem;
+}
+
+.interest-card p {
+  margin-top: 0.4rem;
+  color: var(--text-muted);
+  font-size: 0.93rem;
+}
+
+/* ── Footer ───────────────────────────────── */
+
+footer {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem 3rem;
+  border-top: 1px solid var(--border);
+  color: var(--text-faint);
+  font-size: 0.88rem;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+@media (max-width: 480px) {
+  nav {
+    gap: 1rem;
+  }
+  .hero {
+    padding-top: 3rem;
+  }
+}
