@@ -30,7 +30,6 @@ export default function Home() {
             <a href={profile.linkedin} target="_blank" rel="noopener noreferrer">
               LinkedIn ↗
             </a>
-            <a href={`mailto:${profile.email}`}>Email</a>
           </div>
         </div>
 
