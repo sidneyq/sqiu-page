@@ -13,7 +13,6 @@ export const profile = {
   company: "Waymo",
   location: "San Francisco Bay Area",
   linkedin: "https://www.linkedin.com/in/sidneyqiu/",
-  email: "lzty88@gmail.com",
 
   about: [
     `I'm a systems engineer with over two decades of experience taking
